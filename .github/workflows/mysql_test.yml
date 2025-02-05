@@ -63,9 +63,6 @@ jobs:
 
       - name: Checkout Another Public Repository
         uses: actions/checkout@v4
-        with:
-          repository: NHLStenden/DapperBeerStudent
-          ref: TestForActions
 
       - name: Restore Dependencies
         run: dotnet restore
