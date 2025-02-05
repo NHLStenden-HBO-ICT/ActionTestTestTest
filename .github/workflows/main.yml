@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: ActionTestTest/action@v1
+        uses: https://github.com/NHLStenden-HBO-ICT/ActionTestTest@v1
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
