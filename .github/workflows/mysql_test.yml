@@ -42,6 +42,10 @@ jobs:
       - name: Connect to MySQL and run a query
         run: |
            mysql -h 127.0.0.1 -u test_user -ptest_pass test_db -e "SELECT NOW();"
+           
+      - name: create beer database and user
+        run: |
+          mysql -h 127.0.0.1 -u test_user -ptest_pass test_db -e \"CREATE DATABASE DapperBeer; CREATE USER 'DapperBeer'@'localhost' IDENTIFIED BY 'Test@1234!'; GRANT ALL ON DapperBeer.* TO 'DapperBeer'@'localhost'; FLUSH PRIVILEGES; \"
 
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v4.3.0
