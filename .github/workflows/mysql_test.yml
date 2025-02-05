@@ -56,3 +56,13 @@ jobs:
       - name: check .NET info
         run: |
           dotnet --info
+
+      - name: Checkout Another Public Repository
+        uses: actions/checkout@v4
+        with:
+          repository: NHLStenden/DapperBeerStudent
+          ref: main
+
+      - name: run .NET test
+        run: |
+          dotnet test
