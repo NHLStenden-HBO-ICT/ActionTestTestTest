@@ -41,4 +41,5 @@ jobs:
 
       - name: Connect to MySQL and run a query
         run: |
-          mysql -h 127.0.0.1 -u test_user -ptest_pass test_db -e "SHOW TABLES;"
+          mysql -h 127.0.0.1 -u test_user -ptest_pass test_db -e "CREATE DATABASE DapperBeer;"
+          mysql -h 127.0.0.1 -u test_user -ptest_pass test_db -e "SHOW DATABASES;"
