@@ -45,7 +45,7 @@ jobs:
            
       - name: create beer database and user
         run: |
-              mysql -h 127.0.0.1 -u test_user -ptest_pass -e "CREATE DATABASE DapperBeer;CREATE USER 'DapperBeer'@'localhost' IDENTIFIED BY 'Test@1234!';GRANT ALL PRIVILEGES ON DapperBeer.* TO 'DapperBeer'@'localhost';FLUSH PRIVILEGES;"
+              mysql -h 127.0.0.1 -u root -proot -e "CREATE DATABASE DapperBeer;CREATE USER 'DapperBeer'@'localhost' IDENTIFIED BY 'Test@1234!';GRANT ALL PRIVILEGES ON DapperBeer.* TO 'DapperBeer'@'localhost';FLUSH PRIVILEGES;"
     
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v4.3.0
