@@ -57,6 +57,10 @@ jobs:
         run: |
           dotnet --info
 
+      - name: check ip
+        run: |
+          ifconfig
+
       - name: Checkout Another Public Repository
         uses: actions/checkout@v4
         with:
