@@ -69,4 +69,4 @@ jobs:
 
       - name: run .NET test
         run: |
-          dotnet test
+          dotnet test DapperBeer
